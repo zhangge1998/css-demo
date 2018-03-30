@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .up{
+            width:10px;
+            height:10px;
+            border:1px solid;
+            border-color: black black transparent transparent;
+            transform: rotate(-45deg);
+        }
+        /*使用伪元素*/
+        .down {
+            position: relative;
+            top:20px;
+        }
+        .down:before{
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-right-color: orange;
+            position: absolute;
+            content: "";
+        }
+        .down:after{
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-right-color: white;
+            position: absolute;
+            left: 2px;
+            content: "";
+        }
+
+    </style>
+</head>
+<body>
+<div class="down"></div>
+<div class="up"></div>
+</body>
+</html>
